@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9FF2633-7F25-4C8A-A991-7ED2E9529BBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sherlok</RootNamespace>
+    <AssemblyName>sherlok</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hat_22316 %287%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\calc_start.cs" />
+    <Compile Include="Commands\gb.cs" />
+    <Compile Include="Commands\help_start.cs" />
+    <Compile Include="Extensions\DataGridView\DataGridViewAutoFilterColumnHeaderCell.cs" />
+    <Compile Include="Extensions\DataGridView\DataGridViewAutoFilterTextBoxColumn.cs" />
+    <Compile Include="editor_main.cs">
+      <DependentUpon>editor_main.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="editor_main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>editor_main.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="edit_matpuan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>edit_matpuan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="edit_stanok.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>edit_stanok.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Effects\RedSalut.cs" />
+    <Compile Include="Extensions\Effects\Salut.cs" />
+    <Compile Include="Extensions\Effects\Spark.cs" />
+    <Compile Include="Extensions\Effects\SparkWithTrace.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\edit_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\edit_main.Designer.cs">
+      <DependentUpon>edit_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\edit_main_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\edit_main_add.Designer.cs">
+      <DependentUpon>edit_main_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\edit_main_add_full.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\edit_main_add_full.Designer.cs">
+      <DependentUpon>edit_main_add_full.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\edit_matpuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\edit_matpuan.Designer.cs">
+      <DependentUpon>edit_matpuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\edit_stanok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\edit_stanok.Designer.cs">
+      <DependentUpon>edit_stanok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Effects\effect_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Effects\effect_form.designer.cs">
+      <DependentUpon>effect_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\item_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\item_form.Designer.cs">
+      <DependentUpon>item_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\warehouse.Designer.cs">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="item_datasetMP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>item_datasetMP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="journal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>journal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="main_add.cs">
+      <DependentUpon>main_add.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="main_add.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>main_add.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mp_view_c.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mp_view_c.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rotary_technologyDataSet.cs">
+      <DependentUpon>rotary_technologyDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rotary_technologyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rotary_technologyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rotary_technologyDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rotary_technologyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>warehouse_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse_to_main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>warehouse_to_main.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\edit_main.resx">
+      <DependentUpon>edit_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\edit_main_add.resx">
+      <DependentUpon>edit_main_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\edit_main_add_full.resx">
+      <DependentUpon>edit_main_add_full.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\edit_matpuan.resx">
+      <DependentUpon>edit_matpuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\edit_stanok.resx">
+      <DependentUpon>edit_stanok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Effects\effect_form.resx">
+      <DependentUpon>effect_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\item_form.resx">
+      <DependentUpon>item_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\warehouse.resx">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="editor_main.xsc">
+      <DependentUpon>editor_main.xsd</DependentUpon>
+    </None>
+    <None Include="editor_main.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>editor_main.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="editor_main.xss">
+      <DependentUpon>editor_main.xsd</DependentUpon>
+    </None>
+    <None Include="edit_matpuan.xsc">
+      <DependentUpon>edit_matpuan.xsd</DependentUpon>
+    </None>
+    <None Include="edit_matpuan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>edit_matpuan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="edit_matpuan.xss">
+      <DependentUpon>edit_matpuan.xsd</DependentUpon>
+    </None>
+    <None Include="edit_stanok.xsc">
+      <DependentUpon>edit_stanok.xsd</DependentUpon>
+    </None>
+    <None Include="edit_stanok.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>edit_stanok.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="edit_stanok.xss">
+      <DependentUpon>edit_stanok.xsd</DependentUpon>
+    </None>
+    <None Include="item_datasetMP.xsc">
+      <DependentUpon>item_datasetMP.xsd</DependentUpon>
+    </None>
+    <None Include="item_datasetMP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>item_datasetMP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="item_datasetMP.xss">
+      <DependentUpon>item_datasetMP.xsd</DependentUpon>
+    </None>
+    <None Include="journal.xsc">
+      <DependentUpon>journal.xsd</DependentUpon>
+    </None>
+    <None Include="journal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>journal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="journal.xss">
+      <DependentUpon>journal.xsd</DependentUpon>
+    </None>
+    <None Include="main_add.xsc">
+      <DependentUpon>main_add.xsd</DependentUpon>
+    </None>
+    <None Include="main_add.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>main_add.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="main_add.xss">
+      <DependentUpon>main_add.xsd</DependentUpon>
+    </None>
+    <None Include="mp_view_c.xsc">
+      <DependentUpon>mp_view_c.xsd</DependentUpon>
+    </None>
+    <None Include="mp_view_c.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mp_view_c.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mp_view_c.xss">
+      <DependentUpon>mp_view_c.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="rotary_technologyDataSet.xsc">
+      <DependentUpon>rotary_technologyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rotary_technologyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rotary_technologyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rotary_technologyDataSet.xss">
+      <DependentUpon>rotary_technologyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rotary_technologyDataSet1.xsc">
+      <DependentUpon>rotary_technologyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="rotary_technologyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rotary_technologyDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rotary_technologyDataSet1.xss">
+      <DependentUpon>rotary_technologyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="warehouse_dataset.xsc">
+      <DependentUpon>warehouse_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="warehouse_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>warehouse_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="warehouse_dataset.xss">
+      <DependentUpon>warehouse_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="warehouse_to_main.xsc">
+      <DependentUpon>warehouse_to_main.xsd</DependentUpon>
+    </None>
+    <None Include="warehouse_to_main.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>warehouse_to_main.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="warehouse_to_main.xss">
+      <DependentUpon>warehouse_to_main.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat_22316 %287%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hat_22316.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bubble_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_bar_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_bar_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_view_detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_get.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_bar_green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_bar_red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G_2QMCNo9EI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abstract Blue Background Vector Graphic 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clippy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clippy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bubble_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hat_22316 %287%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

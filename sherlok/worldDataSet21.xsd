@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="worldDataSet2" targetNamespace="http://tempuri.org/worldDataSet21.xsd" xmlns:mstns="http://tempuri.org/worldDataSet21.xsd" xmlns="http://tempuri.org/worldDataSet21.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="worldConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="worldConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.sherlok.Properties.Settings.GlobalReference.Default.worldConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="countrylanguageTableAdapter" GeneratorDataComponentClassName="countrylanguageTableAdapter" Name="countrylanguage" UserDataComponentName="countrylanguageTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="worldConnectionString (Settings)" DbObjectName="world.countrylanguage" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CountryCode`, `Language`, `IsOfficial`, `Percentage` FROM `countrylanguage`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="worldDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="worldDataSet2" msprop:Generator_UserDSName="worldDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="countrylanguage" msprop:Generator_TableClassName="countrylanguageDataTable" msprop:Generator_TableVarName="tablecountrylanguage" msprop:Generator_TablePropName="countrylanguage" msprop:Generator_RowDeletingName="countrylanguageRowDeleting" msprop:Generator_RowChangingName="countrylanguageRowChanging" msprop:Generator_RowEvHandlerName="countrylanguageRowChangeEventHandler" msprop:Generator_RowDeletedName="countrylanguageRowDeleted" msprop:Generator_UserTableName="countrylanguage" msprop:Generator_RowChangedName="countrylanguageRowChanged" msprop:Generator_RowEvArgName="countrylanguageRowChangeEvent" msprop:Generator_RowClassName="countrylanguageRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

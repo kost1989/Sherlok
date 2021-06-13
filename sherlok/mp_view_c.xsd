@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mp_view_c" targetNamespace="http://tempuri.org/mp_view_c.xsd" xmlns:mstns="http://tempuri.org/mp_view_c.xsd" xmlns="http://tempuri.org/mp_view_c.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="rotary_technologyConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="rotary_technologyConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.sherlok.Properties.Settings.GlobalReference.Default.rotary_technologyConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="item_view_mpTableAdapter" GeneratorDataComponentClassName="item_view_mpTableAdapter" Name="item_view_mp" UserDataComponentName="item_view_mpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="rotary_technologyConnectionString (Settings)" DbObjectName="rotary_technology.item_view_mp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idmain`, `name`, `number`, `iznos`, `type`, `count_iznos` FROM `rotary_technology`.`item_view_mp`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idmain" DataSetColumn="idmain" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="number" DataSetColumn="number" />
+              <Mapping SourceColumn="iznos" DataSetColumn="iznos" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="count_iznos" DataSetColumn="count_iznos" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mp_view_c" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mp_view_c" msprop:Generator_UserDSName="mp_view_c">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="item_view_mp" msprop:Generator_TableClassName="item_view_mpDataTable" msprop:Generator_TableVarName="tableitem_view_mp" msprop:Generator_TablePropName="item_view_mp" msprop:Generator_RowDeletingName="item_view_mpRowDeleting" msprop:Generator_RowChangingName="item_view_mpRowChanging" msprop:Generator_RowEvHandlerName="item_view_mpRowChangeEventHandler" msprop:Generator_RowDeletedName="item_view_mpRowDeleted" msprop:Generator_UserTableName="item_view_mp" msprop:Generator_RowChangedName="item_view_mpRowChanged" msprop:Generator_RowEvArgName="item_view_mpRowChangeEvent" msprop:Generator_RowClassName="item_view_mpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idmain" msprop:Generator_ColumnVarNameInTable="columnidmain" msprop:Generator_ColumnPropNameInRow="idmain" msprop:Generator_ColumnPropNameInTable="idmainColumn" msprop:Generator_UserColumnName="idmain" type="xs:int" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:int" />
+              <xs:element name="number" msprop:Generator_ColumnVarNameInTable="columnnumber" msprop:Generator_ColumnPropNameInRow="number" msprop:Generator_ColumnPropNameInTable="numberColumn" msprop:Generator_UserColumnName="number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iznos" msprop:Generator_ColumnVarNameInTable="columniznos" msprop:Generator_ColumnPropNameInRow="iznos" msprop:Generator_ColumnPropNameInTable="iznosColumn" msprop:Generator_UserColumnName="iznos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="count_iznos" msprop:Generator_ColumnVarNameInTable="columncount_iznos" msprop:Generator_ColumnPropNameInRow="count_iznos" msprop:Generator_ColumnPropNameInTable="count_iznosColumn" msprop:Generator_UserColumnName="count_iznos" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
